@@ -78,14 +78,21 @@ def get_command():
 def describe_room():
     room = rooms[player['room']]
     print()
-    cprint(room['title'], 'red')
+    cprint(room['title'], 'yellow')
     print()
-    cprint(room['description'], "white")
+    cprint(room['description'] + get_vailable_exits(), "white")
+    
 
 
 def get_vailable_exits():
     room = rooms[player['room']]
+    exits = room['exit']
 
+    exit_options = []
+    for exit in exits:
+        exit_options.append(exit)
+
+    return " ".join(exit_options)
 
 if __name__ == '__main__':
     main()
