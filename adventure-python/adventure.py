@@ -19,18 +19,29 @@ rooms = {
     "cave": {
         "title": "Cave",
         "description": "You're in a cave.",
+        "exit": {
+            'west': 'outside'
+        },
     },
     "stonehenge": {
         "title": "Stonehenge",
         "description": "What\'s the meaning of Stonehenge?",
+        "exit": {
+            'west': 'outside'
+        }, 
     },
     "1968": {
         "title": "1968",
         "description": "Battle of Khe Sanh",
+        "exit": {
+            'south': 'outside'
+        },
     },
     "imagination": {
         "title": "Imagination",
         "description": "Where is my mind?",
+        "exit": {
+            'north'
     },
 }
 
@@ -47,7 +58,11 @@ def main():
         if command in ['look', 'l']:
             describe_room()
         if command in ['north', 'south', 'east', 'west', 'n', 's', 'e', 'w']:
+<<<<<<< Updated upstream
            move()
+=======
+            move()
+>>>>>>> Stashed changes
         elif command in ['quit', 'q']:
             cprint('Bye!', "white")
             playing = False
