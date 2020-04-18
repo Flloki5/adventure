@@ -19,18 +19,30 @@ rooms = {
     "cave": {
         "title": "Cave",
         "description": "You're in a cave.",
+        "exit": {
+            'west': 'outside' 
+            },
     },
     "stonehenge": {
         "title": "Stonehenge",
         "description": "What\'s the meaning of Stonehenge?",
+        "exit": {
+            'east': 'outside' 
+            },
     },
     "1968": {
         "title": "1968",
         "description": "Battle of Khe Sanh",
+        "exit": {
+            'south': 'outside' 
+            },
     },
     "imagination": {
         "title": "Imagination",
         "description": "Where is my mind?",
+        "exit": {
+            'north': 'outside' 
+            },
     },
 }
 
