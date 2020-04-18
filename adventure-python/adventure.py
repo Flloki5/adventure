@@ -94,6 +94,9 @@ def get_vailable_exits():
 if __name__ == '__main__':
     main()
 
-def move():
 
+def move(command):
+    room = rooms[player['room']]
+    exits = room["exit"]
+    print(exits[command])
     
