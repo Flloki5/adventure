@@ -8,7 +8,7 @@ player = {
 rooms = {
     "outside": {
         "title": "Outside",
-        "description": "You are standing outside of a huge cave entrance.\n Exits are available:",
+        "description": "You are standing outside of a huge cave entrance.\n There are the following exits:",
         "exit": {
             'east': 'cave',
             'west': 'stonehenge',
@@ -19,29 +19,18 @@ rooms = {
     "cave": {
         "title": "Cave",
         "description": "You're in a cave.",
-        "exit": {
-            'west': 'outside'
-        },
     },
     "stonehenge": {
         "title": "Stonehenge",
         "description": "What\'s the meaning of Stonehenge?",
-        "exit": {
-            'west': 'outside'
-        }, 
     },
     "1968": {
         "title": "1968",
         "description": "Battle of Khe Sanh",
-        "exit": {
-            'south': 'outside'
-        },
     },
     "imagination": {
         "title": "Imagination",
         "description": "Where is my mind?",
-        "exit": {
-            'north': 'outside'
     },
 }
 
@@ -58,7 +47,7 @@ def main():
         if command in ['look', 'l']:
             describe_room()
         if command in ['north', 'south', 'east', 'west', 'n', 's', 'e', 'w']:
-           move()
+            move()
         elif command in ['quit', 'q']:
             cprint('Bye!', "white")
             playing = False
@@ -95,7 +84,4 @@ if __name__ == '__main__':
 
 def move():
 
-    """
-    Args:
-    """
-    pass
+    
