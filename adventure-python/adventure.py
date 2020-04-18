@@ -21,9 +21,9 @@ rooms = {
     "1968": {
         "title": "1968",
         "description": "Battle of Khe Sanh",
-    }
+    },
     "imagination": {
-        "title": "Imagination"
+        "title": "Imagination",
         "description": "Where is my mind?",
     },
 }
@@ -41,7 +41,7 @@ def main():
         if command in ['look', 'l']:
             describe_room()
         if command in [north, south, east, west, n, s, e, w]:
-            move()
+           move()
         elif command in ['quit', 'q']:
             cprint('Bye!', "white")
             playing = False
@@ -70,4 +70,4 @@ def move():
     """
     Args:
     """
-    
+    pass
