@@ -8,7 +8,13 @@ player = {
 rooms = {
     "outside": {
         "title": "Outside",
-        "description": "You are standing outside of a huge cave entrance.",
+        "description": "You are standing outside of a huge cave entrance.\n Exits are available:",
+        "exit": {
+            'east': 'cave',
+            'west': 'stonehenge',
+            'north': '1968',
+            'south': 'imagination',
+        },
     },
     "cave": {
         "title": "Cave",
@@ -40,7 +46,7 @@ def main():
         command = get_command()
         if command in ['look', 'l']:
             describe_room()
-        if command in [north, south, east, west, n, s, e, w]:
+        if command in ['north', 'south', 'east', 'west', 'n', 's', 'e', 'w']:
            move()
         elif command in ['quit', 'q']:
             cprint('Bye!', "white")
@@ -60,6 +66,10 @@ def describe_room():
     cprint(room['title'], 'red')
     print()
     cprint(room['description'], "white")
+
+
+def get_vailable_exits():
+    room = rooms[player['room']]
 
 
 if __name__ == '__main__':
