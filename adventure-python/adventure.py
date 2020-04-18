@@ -15,6 +15,9 @@ rooms = {
             'north': '1968',
             'south': 'imagination',
         },
+        "items": {
+            "key": "key",
+        },
     },
     "cave": {
         "title": "Cave",
@@ -53,16 +56,19 @@ room = {
 
 def main():
     describe_room()
+    describe_items()
     playing = True
     while playing:
         command = get_command()
         if command in ['look', 'l']:
             describe_room()
+            describe_items()
         if command in ['north', 'south', 'east', 'west', 'n', 's', 'e', 'w']:
             move(command)
             describe_room()
+            describe_items()
         elif command in ['quit', 'q']:
-            cprint('Bye!', "white")
+            cprint('Bye!', "magenta")
             playing = False
         else:
             print(f'Unrecognized command: {command}')
@@ -79,7 +85,7 @@ def describe_room():
     cprint(room['title'], 'yellow')
     print()
     p = colored(get_vailable_exits(), "green")
-    cprint(room['description'] + p, "white")
+    cprint(room['description'] + p, "magenta")
     
 
 
@@ -98,6 +104,25 @@ def move(command):
     exits = room["exit"]
     next_location = exits[command]
     player['room'] = next_location
+
+
+def describe_items():
+    room = rooms[player['room']]
+    items = get_items_row()
+    colored_items = colored(items, "white")
+    cprint("There are items on the floor: " + colored_items, 'magenta')
+    print()
+
+
+def get_items_row():
+    room = rooms[player['room']]
+    items = room['items']
+    items_names = []
+
+    for item in items:
+        items_names.append(item)
+
+    return "".join(items_names)
 
 
 if __name__ == '__main__':
