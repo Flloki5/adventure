@@ -15,6 +15,7 @@ rooms = {
             'north': '1968',
             'south': 'imagination',
         },
+        "items": ['dirt', 'stick'],
     },
     "cave": {
         "title": "Cave",
@@ -22,6 +23,7 @@ rooms = {
         "exit": {
             'west': 'outside' 
             },
+        "items": ['dirt', 'stick', 'mud', 'mold'],
     },
     "stonehenge": {
         "title": "Stonehenge",
@@ -29,6 +31,7 @@ rooms = {
         "exit": {
             'east': 'outside' 
             },
+        "items": ['bone', 'pepsi can'],
     },
     "1968": {
         "title": "1968",
@@ -36,6 +39,7 @@ rooms = {
         "exit": {
             'south': 'outside' 
             },
+        "items": ['grenade', 'hustler magazine'],
     },
     "imagination": {
         "title": "Imagination",
@@ -43,6 +47,7 @@ rooms = {
         "exit": {
             'north': 'outside' 
             },
+        "items": ['sawdust', 'fish'],
     },
 }
 
