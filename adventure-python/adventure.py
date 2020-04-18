@@ -14,6 +14,22 @@ rooms = {
         "title": "Cave",
         "description": "You're in a cave.",
     },
+    "stonehenge": {
+        "title": "Stonehenge",
+        "description": "What\'s the meaning of Stonehenge?",
+    },
+    "1968": {
+        "title": "1968",
+        "description": "Battle of Khe Sanh",
+    }
+    "imagination": {
+        "title": "Imagination"
+        "description": "Where is my mind?",
+    },
+}
+
+room = {
+    ""
 }
 
 
@@ -24,6 +40,8 @@ def main():
         command = get_command()
         if command in ['look', 'l']:
             describe_room()
+        if command in [north, south, east, west, n, s, e, w]:
+            move()
         elif command in ['quit', 'q']:
             cprint('Bye!', "white")
             playing = False
@@ -46,3 +64,10 @@ def describe_room():
 
 if __name__ == '__main__':
     main()
+
+def move():
+
+    """
+    Args:
+    """
+    
