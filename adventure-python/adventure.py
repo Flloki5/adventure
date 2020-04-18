@@ -41,7 +41,7 @@ rooms = {
         "title": "Imagination",
         "description": "Where is my mind?",
         "exit": {
-            'north'
+            'north': 'outside'
     },
 }
 
@@ -58,11 +58,7 @@ def main():
         if command in ['look', 'l']:
             describe_room()
         if command in ['north', 'south', 'east', 'west', 'n', 's', 'e', 'w']:
-<<<<<<< Updated upstream
            move()
-=======
-            move()
->>>>>>> Stashed changes
         elif command in ['quit', 'q']:
             cprint('Bye!', "white")
             playing = False
