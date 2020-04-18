@@ -1,3 +1,4 @@
+from termcolor import colored, cprint
 
 
 player = {
@@ -24,7 +25,7 @@ def main():
         if command in ['look', 'l']:
             describe_room()
         elif command in ['quit', 'q']:
-            print('Bye!')
+            cprint('Bye!', "white")
             playing = False
         else:
             print(f'Unrecognized command: {command}')
@@ -32,15 +33,15 @@ def main():
 
 def get_command():
     print()
-    return input('> ')
+    return input(colored('> ', "green"))
 
 
 def describe_room():
     room = rooms[player['room']]
     print()
-    print(room['title'])
+    cprint(room['title'], 'red')
     print()
-    print(room['description'])
+    cprint(room['description'], "white")
 
 
 if __name__ == '__main__':
