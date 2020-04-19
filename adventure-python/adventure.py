@@ -3,6 +3,7 @@ from termcolor import colored, cprint
 
 player = {
     'room': 'outside',
+    'inventory': []
 }
 
 rooms = {
@@ -55,7 +56,7 @@ rooms = {
 def main():
     describe_room()
     describe_items()
-    playing = True
+    playing = True    
     while playing:
         command = get_command()
         if command in ['look', 'l']:
@@ -65,6 +66,8 @@ def main():
             move(command)
             describe_room()
             describe_items()
+        if command in rooms[player['room']['items']:
+            pick()
         elif command in ['quit', 'q']:
             cprint('Bye!', "magenta")
             playing = False
@@ -121,6 +124,10 @@ def get_items_row():
         items_names.append(item)
 
     return " ".join(items_names)
+
+def pick()
+
+    pass
 
 
 if __name__ == '__main__':
