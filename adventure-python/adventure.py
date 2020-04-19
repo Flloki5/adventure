@@ -51,10 +51,6 @@ rooms = {
     },
 }
 
-room = {
-    ""
-}
-
 
 def main():
     describe_room()
@@ -124,7 +120,7 @@ def get_items_row():
     for item in items:
         items_names.append(item)
 
-    return "".join(items_names)
+    return " ".join(items_names)
 
 
 if __name__ == '__main__':
