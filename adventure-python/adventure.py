@@ -126,9 +126,8 @@ def get_items_row():
     return " ".join(items_names)
 
 def pick()
-
-    pass
-
+    player['inventory'].append(command)
+    
 
 if __name__ == '__main__':
     main()
